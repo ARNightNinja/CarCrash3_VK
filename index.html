@@ -164,9 +164,9 @@
                         createUnityInstance(
                             canvas,
                             {
-                                dataUrl: 'Build/dfd607fa1892c2d595dbaf432333f26f.data.unityweb',
-                                frameworkUrl: 'Build/a166a8eb1008e44224d8ab9cd5270b31.framework.js.unityweb',
-                                codeUrl: 'Build/a96966af7eed9fe8351bc48070398ce8.wasm.unityweb',
+                                dataUrl: 'Build/04fd98773e945c796ba72141fefd526b.data.unityweb',
+                                frameworkUrl: 'Build/cd3f4a9dc987a46d2fa2c4b3adeb8304.framework.js.unityweb',
+                                codeUrl: 'Build/e2e2b09964f67a0fc483c43aa1afeafe.wasm.unityweb',
                                 streamingAssetsUrl: 'StreamingAssets',
                                 companyName: 'KreizLand.Car.Crash.Simulator',
                                 productName: 'CarDestructionSim',
@@ -650,6 +650,18 @@
 
             window.getIsPaymentsSupported = function() {
                 return bridge.payments.isSupported.toString()
+            }
+
+            window.getIsCatalogSupported = function() {
+                return bridge.payments.isGetCatalogSupported.toString()
+            }
+
+            window.getIsPurchaseListSupported = function() {
+                return bridge.payments.isGetPurchasesSupported.toString()
+            }
+
+            window.getIsPurchaseConsumingSupported = function() {
+                return bridge.payments.isConsumePurchaseSupported.toString()
             }
 
             window.paymentsPurchase = function(options) {
